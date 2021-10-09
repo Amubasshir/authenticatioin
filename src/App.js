@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Register from './Components/Register/Register';
 import Shipping from './Components/Shipping/Shipping';
 import AuthProvider from './Contex/AuthProvider';
@@ -27,9 +28,9 @@ function App() {
             <Register></Register>
 
             </Route>
-            <Route path= "/shipping">
+            <PrivateRoute path= "/shipping">
 <Shipping></Shipping>
-            </Route>
+            </PrivateRoute>
     </Switch>
       </BrowserRouter>
     </AuthProvider>
