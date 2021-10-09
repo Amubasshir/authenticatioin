@@ -4,10 +4,13 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Shipping from './Components/Shipping/Shipping';
+import AuthProvider from './Contex/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <BrowserRouter>
         <Header></Header>
         <Switch>
@@ -23,9 +26,13 @@ function App() {
           <Route path="/register">
             <Register></Register>
 
-          </Route>
+            </Route>
+            <Route path= "/shipping">
+<Shipping></Shipping>
+            </Route>
     </Switch>
       </BrowserRouter>
+    </AuthProvider>
     </div>
   );
 }
